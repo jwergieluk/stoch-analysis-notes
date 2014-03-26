@@ -16,7 +16,7 @@ function MAKE_TEX {
 
 
 PE="../problem-extractor/pe.py"
-PROBLEMS="`pwd`/../problem-pool/stochastic-analysis.tex"
+PROBLEMS="sana-problems.tex"
 TMP="/tmp"
 
 

@@ -1,0 +1,80 @@
+
+\section{Measurability of stochastic processes}
+
+\problem{Progressive $\sigma$-algebra.}
+Let $(\Omega, \cA, \cF, P)$ be a probability space satisfying the usual hypothesis. 
+The following holds: 
+\begin{enumerate}
+    \item An adapted c\`adl\`ag or c\`agl\`ad process is progressively
+        measurable. This implies that the optional $\sigma$-algebra $\cO$ and 
+        the predictable $\sigma$-algebra $\cP$ are contained in the 
+        progressive $\sigma$-algebra $\cR$. 
+
+    \item Conversely, a measurable and adapted process is progressively
+        measurable.
+
+    \item $\cP \subset \cO$. 
+
+    \item $\cR \subset\cM$, where $\cM$ is the measurable $\sigma$-algebra on
+        $\Omega\times \R_{+}$. 
+\end{enumerate}
+
+\problem{Filtations and continuity of paths.} Let $X$ be a stochastic process
+on a probability space $(\Omega, \cA, P)$ and $\cF^{X}=(\cF^{X}_{t})_{t\geq 0}$
+be the natural filtration of $X$. Moreover, $A$ is the event that $X$ is
+continuous on $[0, t_0)$. Then following holds:
+\begin{enumerate}
+    \item If $X$ has c\`adl\`ag paths, i.e. every path of $X$ is a c\`adl\`ag
+        function, then $A\in \cF^{X}_{t_0}$. 
+
+    \item If $X$ is c\`adl\`ag, i.e. $X$ has c\`adl\`ag paths a.s., then $A$
+        may fail to be in $\cF^{X}_{t_0}$.
+
+    \item If $X$ is c\`adl\`ag, and $(\cF_{t})_{t\geq 0}$ is a filtration
+        containing $\cF^{X}$ such that $\cF_{0}$ contains all $P$-null events
+        in $\cA$, then $A\in \cF_{t_0}$.
+
+    \item If $X$ has c\`agl\`ad paths and is adapted to a right-continuous
+        filtration $(\cF_{t})_{t\geq 0}$, then $A\in \cF_{t_{0}}$. 
+\end{enumerate}
+
+
+\section{Stopping times}
+
+\problem{Stopping times. One-liners.} Let $T$ and $S$ be stopping times. 
+\begin{enumerate}
+    \item $T + t_0$ for a $t_0\geq 0$ is a stopping time.
+    \item A fixed time $T \equiv t_0>0$ is a stopping time and we have $\cF_T = \cF_{t_0}$.
+\end{enumerate}
+
+\solution
+\begin{enumerate}
+    \item \begin{align*}
+            \cF_T &=& 
+            \left\{ A\in\bF : A \cap \left\{ t_0 \leq t \right\}\in\cF_t \ \forall t\geq 0 \right\} \\
+            &=& \left\{ A\in\bF : A\in\cF_t \ \forall t\geq t_0 \right\} = \cF_{t_0}.
+        \end{align*}
+\end{enumerate}
+
+\problem{Stopping times and optional times.} An optional time $T$ with respect
+to the filtration $\bF$ is a stopping time, if $\bF$ is right continuous, i.e.\
+$\cF_t=\cF_{t+}$ for all $t\geq 0$.
+
+\solution  Betrachte die Darstellung
+\begin{eqnarray}
+    \left\{ T \leq t \right\} = \bigcap_{\varepsilon\in\bQ^{+}} \left\{ T > t+\varepsilon \right\}
+    = \lim_{\varepsilon\to 0, \varepsilon\in\bQ} \left\{ T > t+\varepsilon \right\}.
+\end{eqnarray}
+Der Schnitt ist als Mengengrenzwert zu verstehen, weil die Mengen $\left\{ T >
+t+\varepsilon \right\}$ ineinandergeschachtelt sind. $\left\{ T \leq t \right\}\in \bF_{t+}$
+genau dann, wenn $\left\{ T \leq t \right\}\in \bF_{t+\varepsilon^{*}}$ $\forall \varepsilon^{*}>0$.
+Es gilt aber für ein fixes $\varepsilon^{*}$
+\begin{equation}
+    \left\{ T \leq t \right\}\ = 
+    \bigcap_{\varepsilon\in\bQ^{+}, \varepsilon\leq \varepsilon^{*}} \left\{ T > t+\varepsilon \right\} 
+    \in\bF_{t+\varepsilon^{*}},
+\end{equation}
+denn es ein abzählbarer Schnitt der Mengen $\left\{ T> t+\varepsilon
+\right\}\in\bF_{t+\varepsilon^{*}}$ ist. Behauptung gilt wegen $\cF_t=\cF_{t+}$ $\forall t$.
+
+

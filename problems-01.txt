@@ -9,4 +9,9 @@ FSE \end{solution}
 
 P Progressive $\sigma$-algebra. 
 P Filtations and continuity of paths.
+P Stopping times. One-liners.
+P Stopping times and optional times.
+
+
+
 
