@@ -1,5 +1,5 @@
 
-TEX \begin{center}{\large{\scshape SHEETNO. Measurability, Filtations, and Stopping Times.}}\end{center}
+TEX \begin{center}{\large{\scshape SHEETNO. Filtrations and Stopping Times.}}\end{center}
 TEX \vskip \baselineskip
 
 FPB \begin{problem}[%s]
@@ -7,11 +7,12 @@ FPE \end{problem}
 FSB \begin{solution}
 FSE \end{solution}
 
-P Progressive $\sigma$-algebra. 
-P Filtations and continuity of paths.
-P Stopping times. One-liners.
-P Stopping times and optional times.
 
+P Stopping times. Basic properties.
+P Stopping time $\sigma$-algebras.
+P Stopping times and right-continuous filtrations.
+P Stopping times. Counterexample.
+P Sequences of stopping times.
 
 
 

@@ -19,7 +19,7 @@ The following holds:
         $\Omega\times \R_{+}$. 
 \end{enumerate}
 
-\problem{Filtations and continuity of paths.} Let $X$ be a stochastic process
+\problem{Filtrations and continuity of paths.} Let $X$ be a stochastic process
 on a probability space $(\Omega, \cA, P)$ and $\cF^{X}=(\cF^{X}_{t})_{t\geq 0}$
 be the natural filtration of $X$. Moreover, $A$ is the event that $X$ is
 continuous on $[0, t_0)$. Then following holds:
@@ -41,10 +41,14 @@ continuous on $[0, t_0)$. Then following holds:
 
 \section{Stopping times}
 
-\problem{Stopping times. One-liners.} Let $T$ and $S$ be stopping times. 
+\problem{Stopping times. Basic properties.} Assume that the stochastic basis
+$(\Omega, \cA, \bF, P)$ satisfies the usual conditions, and $T$, $S$, and $S_n,
+n\in\bN$ are stopping times. Then the following holds.
 \begin{enumerate}
-    \item $T + t_0$ for a $t_0\geq 0$ is a stopping time.
-    \item A fixed time $T \equiv t_0>0$ is a stopping time and we have $\cF_T = \cF_{t_0}$.
+    \item $T + t_0$ for $t_0\geq 0$ is a stopping time.
+    \item $T+S$ is a stopping time.
+    \item A fixed time $U \equiv t_0>0$ is a stopping time and we have $\cF_U = \cF_{t_0}$.
+    \item $\bigvee_{n\in\bN} S_n$ and $\bigwedge_{n\in\bN} S_n$ are stopping times. 
 \end{enumerate}
 
 \solution
@@ -56,9 +60,24 @@ continuous on $[0, t_0)$. Then following holds:
         \end{align*}
 \end{enumerate}
 
-\problem{Stopping times and optional times.} An optional time $T$ with respect
-to the filtration $\bF$ is a stopping time, if $\bF$ is right continuous, i.e.\
-$\cF_t=\cF_{t+}$ for all $t\geq 0$.
+\problem{Stopping time $\sigma$-algebras.} Let $T$ be a stopping time on a
+stochastic basis $(\Omega, \cA, \bF, P)$.
+\begin{enumerate}
+    \item $\cF_T$ is a $\sigma$-algebra.
+    \item $\cF_{T-} \subset \cF_{T}$.
+    \item $T$ is $\cF_{T-}$-measurable.
+\end{enumerate}
+
+\problem{Stopping times and right-continuous filtrations.} Let $(\Omega, \cA,
+\bF, P)$ be a stochastic basis with right-continuous filtration $\bF= \left(
+\cF_{t} \right)_{t\geq 0}$. A random time $T$ satisfying $\{T<t\}\in\cF_{t}$ for
+all $t\geq 0$ is called an optional time. Prove the following statements.
+\begin{enumerate}
+    \item $T$ is a stopping time, iff it is an optional time.
+    \item Show that the right-continuity of $\bF$ is essential for the above
+        property to hold: Construct an optional time which is not a stopping
+        time.
+\end{enumerate}
 
 \solution  Betrachte die Darstellung
 \begin{eqnarray}
@@ -76,5 +95,14 @@ Es gilt aber für ein fixes $\varepsilon^{*}$
 \end{equation}
 denn es ein abzählbarer Schnitt der Mengen $\left\{ T> t+\varepsilon
 \right\}\in\bF_{t+\varepsilon^{*}}$ ist. Behauptung gilt wegen $\cF_t=\cF_{t+}$ $\forall t$.
+
+\problem{Stopping times. Counterexample.} Give an example of stopping times $S$
+and $T$, with $S\leq T$ for which $T-S$ is not a stopping time. 
+
+\problem{Sequences of stopping times.} 
+$(T_n)_{n\in\bN}$ is a sequence of stopping times decreasing to a random time
+$T$. Show that $T$ is a stopping time, and that $\cF_{T} = \bigcap_{n\in\bN}
+\cF_{T_n}$. 
+
 
 
