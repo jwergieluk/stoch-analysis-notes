@@ -1,3 +1,4 @@
+INPUT sheet-head.tex
 
 TEX \begin{center}{\large{\scshape SHEETNO. Filtrations and Stopping Times.}}\end{center}
 TEX \vskip \baselineskip
@@ -14,5 +15,4 @@ P Stopping times and right-continuous filtrations.
 P Stopping times. Counterexample.
 P Sequences of stopping times.
 
-
-
+INPUT sheet-tail.tex

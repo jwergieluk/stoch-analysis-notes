@@ -1,3 +1,4 @@
+INPUT sheet-head.tex
 
 TEX \begin{center}{\large{\scshape SHEETNO. Measurability.}}\end{center}
 TEX \vskip \baselineskip
@@ -11,6 +12,4 @@ FSE \end{solution}
 P Progressive $\sigma$-algebra. 
 P Filtrations and continuity of paths.
 
-
-
-
+INPUT sheet-tail.tex
