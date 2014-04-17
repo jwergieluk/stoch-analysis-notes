@@ -69,11 +69,12 @@ stochastic basis $(\Omega, \cA, \bF, P)$.
 \end{enumerate}
 
 \problem{Stopping times and right-continuous filtrations.} Let $(\Omega, \cA,
-\bF, P)$ be a stochastic basis with right-continuous filtration $\bF= \left(
-\cF_{t} \right)_{t\geq 0}$. A random time $T$ satisfying $\{T<t\}\in\cF_{t}$ for
-all $t\geq 0$ is called an optional time. Prove the following statements.
+\bF, P)$ be a filtered probability space. A random time $T$ satisfying
+$\{T<t\}\in\cF_{t}$ for all $t\geq 0$ is called an optional time. Prove the
+following statements.
 \begin{enumerate}
-    \item $T$ is a stopping time, iff it is an optional time.
+    \item Assume that $\bF$ is right-continuous. $T$ is a stopping time, iff it
+        is an optional time.
     \item Show that the right-continuity of $\bF$ is essential for the above
         property to hold: Construct an optional time which is not a stopping
         time.

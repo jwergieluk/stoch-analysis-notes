@@ -9,10 +9,10 @@ FSB \begin{solution}
 FSE \end{solution}
 
 
-P Stopping times. Basic properties.
-P Stopping time $\sigma$-algebras.
-P Stopping times and right-continuous filtrations.
-P Stopping times. Counterexample.
-P Sequences of stopping times.
+S Stopping times. Basic properties.
+S Stopping time $\sigma$-algebras.
+S Stopping times and right-continuous filtrations.
+S Stopping times. Counterexample.
+S Sequences of stopping times.
 
 INPUT sheet-tail.tex

@@ -26,7 +26,8 @@ for KEYS in problems-??.txt; do
     PDF=${KEYS/.txt/.pdf}
 
     if [[ $KEYS -nt $PDF  ]]; then
-        $PE $KEYS $PROBLEMS | sed -r "s/SHEETNO/$NO/g" >> $TMP/$TEX
+        $PE $KEYS $PROBLEMS | sed -r "s/SHEETNO/$NO/g" > $TMP/$TEX
+        pdflatex    -output-directory   $TMP $TMP/$TEX
         pdflatex    -output-directory   $TMP $TMP/$TEX
         cp $TMP/${KEYS/.txt/.pdf} `pwd`
     fi
