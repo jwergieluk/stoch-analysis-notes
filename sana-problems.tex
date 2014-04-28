@@ -1,34 +1,10 @@
 
 \section{Measurability of stochastic processes}
 
-\problem{Progressive measurability. Definition and basic properties.} 
-An adapted c\`adl\`ag or c\`agl\`ad process is
-progressively measurable. 
-
-\problem{Progressive measurability. Stopping times.} Let $X$ be a
-progressively measurable process and $T$ a stopping time on a filtered
-probability space $(\Omega, \cA, \bF, P)$. Then $X^{T}$ is progressively
-measurable with respect to the filtration $\bF^{T} = (\cF_{T \wedge t})_{t\geq
-0}$. 
-
-
-\problem{Progressive $\sigma$-algebra.}
-Let $(\Omega, \cA, \cF, P)$ be a probability space satisfying the usual hypothesis. 
-The following holds: 
-\begin{enumerate}
-    \item An adapted c\`adl\`ag or c\`agl\`ad process is progressively
-        measurable. This implies that the optional $\sigma$-algebra $\cO$ and 
-        the predictable $\sigma$-algebra $\cP$ are contained in the 
-        progressive $\sigma$-algebra $\cR$. 
-
-    \item Conversely, a measurable and adapted process is progressively
-        measurable.
-
-    \item $\cP \subset \cO$. 
-
-    \item $\cR \subset\cM$, where $\cM$ is the measurable $\sigma$-algebra on
-        $\Omega\times \R_{+}$. 
-\end{enumerate}
+\problem{Progressive measurability. Stopping times.} Let $X$ be a progressively
+measurable process and $T$ a stopping time on a filtered probability space
+$(\Omega, \cA, \bF, P)$. Then $X^{T}$ is progressively measurable with respect
+to the filtration $\bF^{T} = (\cF_{T \wedge t})_{t\geq 0}$. 
 
 \problem{Filtrations and continuity of paths.} Let $X$ be a stochastic process
 on a probability space $(\Omega, \cA, P)$ and $\cF^{X}=(\cF^{X}_{t})_{t\geq 0}$
@@ -52,7 +28,7 @@ continuous on $[0, t_0)$. Then following holds:
 
 \section{Stopping times}
 
-\problem{Stopping times. Basic properties.} Assume that the stochastic basis
+\problem{Stopping times. Arithmetic.} Assume that the stochastic basis
 $(\Omega, \cA, \bF, P)$ satisfies the usual conditions, and $T$, $S$, and $S_n,
 n\in\bN$ are stopping times. Then the following holds.
 \begin{enumerate}
@@ -64,11 +40,15 @@ n\in\bN$ are stopping times. Then the following holds.
 
 \solution
 \begin{enumerate}
-    \item \begin{align*}
-            \cF_T &=& 
-            \left\{ A\in\bF : A \cap \left\{ t_0 \leq t \right\}\in\cF_t \ \forall t\geq 0 \right\} \\
-            &=& \left\{ A\in\bF : A\in\cF_t \ \forall t\geq t_0 \right\} = \cF_{t_0}.
-        \end{align*}
+\item $\left\{ T+t_{0}\leq t \right\} = \left\{ T\leq t-t_{0} \right\} \in \cF_{(t-t_0)^{+}} \subset \cF_{t}$.
+\item $\left\{ T+S > t \right\} = \left\{ T=0, S>t \right\} \cup \left\{ T=t, S>0 \right\} \cup 
+    \left\{ T>t \right\} \cup \bigcup_{r\in(0,t)\cap \bQ} \left\{ T\leq r , S> t-r \right\}$.
+\item $\left\{ U \leq t \right\} = \left\{ t_{0} \leq t \right\} \in \left\{
+    \emptyset, \Omega \right\} \subset \cF_{t}$ for all $t\geq 0$. 
+    $\cF_U = \left\{ A\in\cA : A \cap \left\{ t_0 \leq t \right\}\in\cF_t \
+    \forall t\geq 0 \right\} = \left\{ A\in\cA : A\in\cF_t \ \forall t\geq t_0
+    \right\} = \cF_{t_0}$.
+
 \end{enumerate}
 
 \problem{Stopping time $\sigma$-algebras.} Let $T$ be a stopping time on a

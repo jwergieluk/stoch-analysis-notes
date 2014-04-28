@@ -8,8 +8,7 @@ FPE \end{problem}
 FSB \begin{solution}
 FSE \end{solution}
 
-
-S Stopping times. Basic properties.
+S Stopping times. Arithmetic.
 S Stopping time $\sigma$-algebras.
 S Stopping times and right-continuous filtrations.
 S Stopping times. Counterexample.
