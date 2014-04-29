@@ -1,4 +1,3 @@
-
 \section{Measurability of stochastic processes}
 
 \problem{Progressive measurability. Stopping times.} Let $X$ be a progressively
@@ -40,15 +39,20 @@ n\in\bN$ are stopping times. Then the following holds.
 
 \solution
 \begin{enumerate}
-\item $\left\{ T+t_{0}\leq t \right\} = \left\{ T\leq t-t_{0} \right\} \in \cF_{(t-t_0)^{+}} \subset \cF_{t}$.
-\item $\left\{ T+S > t \right\} = \left\{ T=0, S>t \right\} \cup \left\{ T=t, S>0 \right\} \cup 
-    \left\{ T>t \right\} \cup \bigcup_{r\in(0,t)\cap \bQ} \left\{ T\leq r , S> t-r \right\}$.
+\item $\left\{ T+t_{0}\leq t \right\} = \left\{ T\leq t-t_{0} \right\} \in
+    \cF_{(t-t_0)^{+}} \subset \cF_{t}$ for all $t\geq 0$.
+\item $\left\{ T+S > t \right\} = \left\{ T=0, S>t \right\} \cup \left\{ T=t,
+    S>0 \right\} \cup \left\{ T>t \right\} \cup \bigcup_{r\in(0,t)\cap \bQ}
+    \left\{ T\leq r , S> t-r \right\}$, which is a countable union of sets from
+    $\cF_{t}$. 
 \item $\left\{ U \leq t \right\} = \left\{ t_{0} \leq t \right\} \in \left\{
     \emptyset, \Omega \right\} \subset \cF_{t}$ for all $t\geq 0$. 
     $\cF_U = \left\{ A\in\cA : A \cap \left\{ t_0 \leq t \right\}\in\cF_t \
     \forall t\geq 0 \right\} = \left\{ A\in\cA : A\in\cF_t \ \forall t\geq t_0
     \right\} = \cF_{t_0}$.
-
+\item $\left\{ \min_{n\in\bN} S_{n} \leq t \right\} = \bigcap_{n\in\bN} \left\{
+        S_{n}\leq t \right\}$. $\left\{ \max_{n\in\bN} > t \right\} =
+        \bigcap_{n\in\bN} \left\{ S_{n} > t \right\}$.
 \end{enumerate}
 
 \problem{Stopping time $\sigma$-algebras.} Let $T$ be a stopping time on a
@@ -59,18 +63,38 @@ stochastic basis $(\Omega, \cA, \bF, P)$.
     \item $T$ is $\cF_{T-}$-measurable.
 \end{enumerate}
 
-\problem{Stopping times and continuity of filtrations.}
+\solution 
+\begin{enumerate}
+    \item $\emptyset \in \cF_{T}$ and $\left\{ T\leq t \right\} \cap A_{i} \in
+        \cF_{t}$ for all $t\geq 0$ implies $\left\{ T\leq t \right\} \cap
+        \bigcup_{n\in\bN} A_i \in \cF_t$ and $\bigcup_{n\in\bN} A_i \in
+        \cF_{T}$. $\left\{ T \leq t \right\} \cap A \in\cF_t$ implies
+        $\overline{ \left\{ T\leq t \right\} \cap A } \cap \left\{ T\leq t
+        \right\} = \bar A \cap \left\{ T\leq t \right\} \in \cF_{t}$.
+    \item Consider a family of sets $A_{s}\in\cF_{s}$, $s\geq 0$. For any
+        $t\geq 0$ we have $A_{0} \cap \left\{ {T\leq t} \right\} \in\cF_{t}$,
+        and $A_s \cap \left\{ s<T \right\} \cap \left\{ T\leq t \right\} =
+        \emptyset \in\cF_{t}$ if $s\geq t$, and $\overline{ \left\{ s<T
+        \right\} } = \left\{ T\leq s \right\} \in \cF_{t}$ for $s<t$ and hence
+        $A_s \cap \left\{ s<T \right\} \cap \left\{ T\leq t \right\}
+        \in\cF_{t}$. Since the generators of $\cF_{T-}$ are in $\cF_{T}$, so is
+        $\cF_{T-}$.
+    \item $T : (\Omega, \cF_{T-}) \to ( [0,\infty], \cB([0,\infty]) )$ is a
+        measurable function.
+\end{enumerate}
+
+\problem{Stopping times and the continuity of filtrations.}
 Consider a filtered probability space $(\Omega, \cA, \bF, P)$ with $\Omega =
 [0, \infty)$ and $\cF_t = \cB([0,t]) \cup \left\{ (t,\infty), [0, \infty)
 \right\}$ for every $t\geq 0$. We define a random time $T:\Omega\to[0,\infty),
 \omega \mapsto \omega$.  Then the following holds
 \begin{enumerate}
-    \item $\cF_{t} = \cF_{t-} = \cF_{t+}$.
-    \item $\cF_{T-} = \cF_{T}$.
+    \item $\cF_{t} = \cF_{t-} = \cF_{t+}$ for all $t\geq 0$.
+    \item $\cF_{T-} \neq \cF_{T}$.
 \end{enumerate}
 Is $T$ a stopping time?
 
-\problem{Stopping times. I}
+\problem{Stopping times. A construction.}
 On a stochastic basis $(\Omega, \cA, \bF, P)$ define a stopping time $T$ and a
 real random variable $Z$. If $T \leq Z$ and $Z$ is $\cF_{T}$ measurable, then
 $Z$ is a stopping time.
@@ -87,30 +111,68 @@ following statements.
         time.
 \end{enumerate}
 
-\solution  Betrachte die Darstellung
-\begin{eqnarray}
-    \left\{ T \leq t \right\} = \bigcap_{\varepsilon\in\bQ^{+}} \left\{ T > t+\varepsilon \right\}
-    = \lim_{\varepsilon\to 0, \varepsilon\in\bQ} \left\{ T > t+\varepsilon \right\}.
-\end{eqnarray}
-Der Schnitt ist als Mengengrenzwert zu verstehen, weil die Mengen $\left\{ T >
-t+\varepsilon \right\}$ ineinandergeschachtelt sind. $\left\{ T \leq t \right\}\in \bF_{t+}$
-genau dann, wenn $\left\{ T \leq t \right\}\in \bF_{t+\varepsilon^{*}}$ $\forall \varepsilon^{*}>0$.
-Es gilt aber für ein fixes $\varepsilon^{*}$
-\begin{equation}
-    \left\{ T \leq t \right\}\ = 
-    \bigcap_{\varepsilon\in\bQ^{+}, \varepsilon\leq \varepsilon^{*}} \left\{ T > t+\varepsilon \right\} 
-    \in\bF_{t+\varepsilon^{*}},
-\end{equation}
-denn es ein abzählbarer Schnitt der Mengen $\left\{ T> t+\varepsilon
-\right\}\in\bF_{t+\varepsilon^{*}}$ ist. Behauptung gilt wegen $\cF_t=\cF_{t+}$ $\forall t$.
+\solution 
+\begin{enumerate}
+    \item Let $T$ be an optional time. The right-continuity of $\bF$ yields
+        $\left\{ T=t \right\} = \bigcap_{\varepsilon>0, \varepsilon\in\bQ}
+        \left\{ T<t+\varepsilon \right\} \in \cF_{t}$. Hence, $\left\{ T\leq t \right\} =
+        \left\{ T<t \right\} \cup \left\{ T=t \right\} \in \cF_{t}$.  Conversely, if $T$ is a
+        stopping time, then $\left\{ T<t \right\} =
+        \bigcup_{\varepsilon>0,\varepsilon\in\bQ} \left\{ T \leq t-\varepsilon
+        \right\}\in \cF_t$, since $\cF$ is an increasing sequence. Note that the
+        right-continuity is not needed to prove this part of the equivalence. 
+    \item Set $\Omega = \left\{ \omega_{1}, \omega_{2} \right\}, \cA =
+        2^{\Omega}$, and $\bF$ to be the natural filtration of the process $X$
+        with $X_t(\omega) = \ind_{ \left\{ t>1, \omega= \omega_{2} \right\} }$.
+        We have $\cF_{t} = \left\{ \emptyset, \Omega \right\}$ for all $t\leq
+        1$, and $\cF_{t} = \cA$ for $t>1$, so $\bF$ is not right-continuous.
+        Now, set $T(\omega_{1}) = \infty$ and $T(\omega_{2}) = 1$, that is, $T$
+        is the hitting time of the set $\left\{ 1 \right\}$ of $X$. $\left\{ T
+        < t \right\} = \emptyset$ for $t\leq 1$ and $\left\{ T < t  \right\} =
+        \left\{ \omega_{2} \right\} \in \cF_{t}$ for $t>1$, hence $T$ is an
+        optional time.  But $T$ is not a stopping time since $\left\{ {T\leq 1}
+    \right\} = \left\{ \omega_{2} \right\} \nin \cF_{1}$. Remark: $X$ is an
+    example of a Markov process not possessing the Feller property. 
+\end{enumerate}
 
-\problem{Stopping times. Counterexample.} Give an example of stopping times $S$
+
+\problem{Stopping times. A counterexample.} Give an example of stopping times $S$
 and $T$, with $S\leq T$ for which $T-S$ is not a stopping time. 
+
+\solution
 
 \problem{Sequences of stopping times.} 
 $(T_n)_{n\in\bN}$ is a sequence of stopping times decreasing to a random time
 $T$. Show that $T$ is a stopping time, and that $\cF_{T} = \bigcap_{n\in\bN}
 \cF_{T_n}$. 
+
+\solution 
+Since $T(\omega) = \lim_{n\in\bN} T_{n}(\omega)$, $T_{n}(\omega) \geq
+T_{n-1}(\omega)$ for all $n\in\bN$, we get $\left\{ T>t \right\} =
+\bigcap_{n\in\bN} \left\{ T_{n}>t \right\} \in \cF_{t}$, and the stopping time
+property of $T$. Moreover, 
+\begin{align*}
+    \bigcap_{n\in\bN} \bF_{T_{n}} &= \left\{ A\in\cA : \left\{ T_n\leq t \right\}\cap A \in \cF_{t} \ \forall t\geq 0,\forall n\in\bN \right\} \\
+    &= \left\{ A \in \cA : \left\{ T_{n}>t \right\}\cup \bar A \in\cF_{t} \ \forall t,n \right\} \\
+    &\subset \left\{A\in\cA :\bigcap_{n\in\bN} \left\{T_{n}>t\right\} \cup \bar A\in\cF_t \ \forall t \right\}
+    = \cF_{T}.
+\end{align*}
+$T$ is a stopping time, and $T\leq T_n$ implies $\cF_{T} \subset \cF_{T_{n}}$.
+This proves the equality.
+
+\problem{Stopping time $\sigma$-algebras. Monotonicity.} Let $S, T$ be
+stopping times with $S\leq T$, then $\cF_{S} \subset \cF_{T}$.
+
+\solution
+
+\problem{Stopping time $\sigma$-algebras. Questions.} 
+Let $T$ be a stopping time on a filtered probability space $(\Omega,\cA, \bF,
+P)$.  $\cF_{T-}$ is generated by $\cF_0$ and the sets $A_{t} \cap \left\{ {t>T}
+\right\}$ with $A_t \in \cF_t$.  Define $\cF_{T\sim} = \left\{ A \in \cA : A
+\cap \left\{ T <t \right\} \in\cF_{t} \ \forall t\geq 0 \right\}$. 
+\begin{enumerate}
+    \item Are $\cF_{T-}$ and $\cF_{T\sim}$ equal?
+\end{enumerate}
 
 
 

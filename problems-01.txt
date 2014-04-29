@@ -5,13 +5,13 @@ TEX \vskip \baselineskip
 
 FPB \begin{problem}[%s]
 FPE \end{problem}
-FSB \begin{solution}
-FSE \end{solution}
+FSB \emph{Solution.}
+FSE 
 
 S Stopping times. Arithmetic.
 S Stopping time $\sigma$-algebras.
 S Stopping times and right-continuous filtrations.
-S Stopping times. Counterexample.
+S Stopping times. A counterexample.
 S Sequences of stopping times.
 
 INPUT sheet-tail.tex
