@@ -10,7 +10,7 @@ FSE
 
 S Stopping times. Arithmetic.
 S Stopping time $\sigma$-algebras.
-S Stopping times and right-continuous filtrations.
+S Stopping times and optional times.
 S Stopping times. A counterexample.
 S Sequences of stopping times.
 

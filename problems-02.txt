@@ -16,5 +16,8 @@ P Stopping time $\sigma$-algebras. Questions.
 P Progressive measurability. Stopping times.
 P Filtrations and continuity of paths.
 
+P Stopping times. KS2.2.
+P Measurable process stopped at a random time.
+
 INPUT sheet-tail.tex
 
