@@ -8,16 +8,16 @@ FPE \end{problem}
 FSB \emph{Solution.}
 FSE 
 
-P Stopping times and the continuity of filtrations.
-P Stopping time $\sigma$-algebras. Monotonicity.
 P Stopping times. A construction.
-P Stopping time $\sigma$-algebras. Questions.
+P Stopping times and the continuity of filtrations.
+P Stopping times. Egoroff's problem.
+P Stopping time $\sigma$-algebras. Monotonicity.
 
 P Progressive measurability. Stopping times.
-P Filtrations and continuity of paths.
 
-P Stopping times. KS2.2.
 P Measurable process stopped at a random time.
+P Sum of optional times.
+P Optional times. Approximation by stopping times.
 
 INPUT sheet-tail.tex
 
