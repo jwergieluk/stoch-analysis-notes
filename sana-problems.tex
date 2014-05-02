@@ -11,6 +11,14 @@ $(\Omega, \cA, \bF, P)$. Then the following holds:
     \item $X^T$ is progressively measurable with respect to the filtration $\bF$.
 \end{enumerate}
 
+\solution
+\begin{enumerate}
+    \item 
+    \item $\bF^{T}$ is a filtration $(T \wedge t)_{t\leq 0}$ is an increasing 
+        family of stopping times.
+    \item 
+\end{enumerate}
+
 \problem{Filtrations and continuity of paths.} Let $X$ be a stochastic process
 on a probability space $(\Omega, \cA, P)$ and $\cF^{X}=(\cF^{X}_{t})_{t\geq 0}$
 be the natural filtration of $X$. Moreover, $A$ is the event that $X$ is
@@ -105,6 +113,13 @@ On a stochastic basis $(\Omega, \cA, \bF, P)$ define a stopping time $T$ and a
 real random variable $Z$. If $T \leq Z$ and $Z$ is $\cF_{T}$ measurable, then
 $Z$ is a stopping time.
 
+\solution 
+Consider the disjoint union $\left\{ T\leq t \right\} = \left\{ Z \leq t
+\right\} \cup \left\{ \left\{ T\leq t \right\}\cap \left\{ Z>t \right\}
+\right\}$. $Z\in\cF_{T}$ implies $\left\{ \left\{ T\leq t \right\}\cap \left\{
+Z>t \right\} \right\} \in \cF_{t}$, and therefore $\left\{ Z \leq t \right\}
+\in \cF_{t}$.
+
 \problem{Stopping times and optional times.} Let $(\Omega, \cA,
 \bF, P)$ be a filtered probability space. A random time $T$ satisfying
 $\{T<t\}\in\cF_{t}$ for all $t\geq 0$ is called an optional time. Prove the
@@ -182,9 +197,14 @@ $T$ is a stopping time, and $T\leq T_n$ implies $\cF_{T} \subset \cF_{T_{n}}$.
 This proves the equality.
 
 \problem{Stopping time $\sigma$-algebras. Monotonicity.} Let $S, T$ be
-stopping times with $S\leq T$, then $\cF_{S} \subset \cF_{T}$.
+stopping times with $S\leq T$, then $\cF_{S} \subseteq \cF_{T}$.
 
 \solution
+We work with a filtered probability space $(\Omega,\cA, \bF, P)$.
+$S\leq T$ implies $\left\{ S\leq t \right\} \supseteq \left\{ T\leq t
+\right\}$.  And therefore, for an $A\in \cA$, $A \cap \left\{ S\leq t
+\right\}\in\cF_{t}$ implies $A \cap \left\{ T\leq t \right\} = A\cap \left\{
+S\leq t \right\}\cap \left\{ T\leq t \right\}\in\cF_{t}$.
 
 \problem{Stopping time $\sigma$-algebras. Questions.} 
 Let $T$ be a stopping time on a filtered probability space $(\Omega,\cA, \bF,
