@@ -256,11 +256,40 @@ Show that
 \end{enumerate}
 
 
+\problem{Hitting time of an open set.}  Let $(\Omega, \cA, \bF, P)$ be a
+filtered probability space, and $X$ an adapted c\`adl\`ag process with values
+in $\bR^{n}$. The hitting time $T_B$ of a Borel set $B\in\cB(\bR^{n})$ by $X$
+is defined as
+\begin{align*}
+    T_B(\omega) = \operatorname{inf} \left\{ t \geq 0 : X_t(\omega) \in B \right\}.
+\end{align*}
+Show that
+\begin{enumerate}
+    \item $T_B$ is a stopping time. 
+    \item $T_B$ is an optional time. 
+\end{enumerate}
+
+\problem{Hitting time of a closed set.} Let $X$ be an adapted c\`adl\`ag process on a
+stochastic basis $(\Omega, \cA, \bF, P)$, and $C$ be a closed set. Then the hitting
+time $T_C$ of $C$ is a stopping time. 
+
+
 \section{Local martingales. }
 
-\paragraph{Bounded local martingale is a true martingale.} Prove the proposition 
-stated in the title. 
+\problem{Bounded local martingales are true martingales.} Local martingales
+with a.s.\ bounded paths is a martingale.
 
+\problem{Continuous processes are locally bounded.} Let $X$ be an adapted process with
+continuous paths. Show that $X$ is locally bounded.
 
+\problem{Martingales and completition of the stochastic basis.} Let $X$ be a
+submartingale on a completed stochastic basis $(\Omega, \cA^{P}, \bF^{P}, P)$. Then
+there exists a process $X^{'}$, $P$ indistinguishable from $X$, adapted to the
+(uncompleted) filtration $\bF$, and also an $\bF$ stopping time $T$, such that
+for all $\omega$ the path $X_{.}(\omega)$ is c\`ad everywhere and l\`ad
+everywhere except at $T(\omega)$, and moreover $P(T<\infty)=0$. 
+
+\problem{Uniformly integrable martingales. A counterexample.} Give an example
+of a martingale $X$ and a stopping time $T$, such that $E X_{T} \neq E X_{0}$. 
 
 

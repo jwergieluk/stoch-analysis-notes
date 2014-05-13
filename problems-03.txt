@@ -1,6 +1,6 @@
 INPUT sheet-head.tex
 
-TEX \begin{center}{\large{\scshape SHEETNO. Stopping times and Measurability.}}\end{center}
+TEX \begin{center}{\large{\scshape SHEETNO. Localization and Martingales.}}\end{center}
 TEX \vskip \baselineskip
 
 FPB \begin{problem}[%s]
@@ -9,8 +9,16 @@ FSB \emph{Solution.}
 FSE 
 
 
+P Hitting time of a closed set.
+P Hitting time of an open set.
+
 P Stopping time $\sigma$-algebras. Questions.
 P Filtrations and continuity of paths.
+P Bounded local martingales are true martingales.
+P Continuous processes are locally bounded.
+P Martingales and completition of the stochastic basis.
+P Uniformly integrable martingales. A counterexample.
+
 
 INPUT sheet-tail.tex
 
