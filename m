@@ -34,4 +34,4 @@ for KEYS in problems-??.txt; do
 done
 
 
-MAKE_TEX js-comments
+MAKE_TEX index

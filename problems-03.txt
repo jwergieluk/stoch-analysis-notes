@@ -9,14 +9,15 @@ FSB \emph{Solution.}
 FSE 
 
 
-P Hitting time of a closed set.
 P Hitting time of an open set.
+P Hitting time of a closed set.
+P Stopping times. Galmarino's test.
 
-P Stopping time $\sigma$-algebras. Questions.
-P Filtrations and continuity of paths.
+#P Stopping time $\sigma$-algebras. Questions.
+#P Filtrations and continuity of paths.
 P Bounded local martingales are true martingales.
 P Continuous processes are locally bounded.
-P Martingales and completition of the stochastic basis.
+P Martingales and completion of the stochastic basis.
 P Uniformly integrable martingales. A counterexample.
 
 

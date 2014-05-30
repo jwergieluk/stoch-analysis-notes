@@ -1,0 +1,48 @@
+\documentclass[10pt,twoside,a4paper]{amsart}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}
+\usepackage{concmath}
+
+\title{Stochastic Analysis problems}\author{Julian Wergieluk}\date{\today}
+\input{preamble}\input{commands}
+%\usepackage[ngerman]{babel}
+%\usepackage[citestyle=alphabetic, url=false, backend=biber]{biblatex}
+%\addbibresource{sources.bib}
+
+\usepackage[right=3cm, left=3cm, top=3.0cm, bottom=3.0cm]{geometry}
+
+% problem collection commands
+%\newcommand{\problem}[1]{\subsection{#1}}
+%\newcommand{\solution}{\paragraph*{Solution.}}
+
+\begin{document}
+%\chapterstyle{section}
+%\pagestyle{headings}
+\sloppy
+
+%\frontmatter
+\maketitle
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%\mainmatter
+
+\setcounter{secnumdepth}{4}
+%\renewcommand{\theparagraph}{\arabic{chapter}.\arabic{paragraph}}
+\renewcommand{\theparagraph}{\arabic{chapter}.\arabic{paragraph}}
+\renewcommand{\theenumi}{\Alph{enumi}.}
+\renewcommand{\labelenumi}{\theenumi}
+
+
+\input{sana-problems}
+
+
+
+%\backmatter
+%\printbibliography
+%\bibliographystyle{alpha}
+%\bibliography{../latex-common/library}
+
+\end{document}
+
+% vim: set spelllang=de; set spell
