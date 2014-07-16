@@ -35,3 +35,4 @@ done
 
 
 MAKE_TEX index
+MAKE_TEX sana-questions
